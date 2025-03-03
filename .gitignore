@@ -1,0 +1,9 @@
+# Ignore virtual environment
+venv/
+
+# Ignore archive folders
+Code/base/archive/
+Code/ui/archive/
+
+# Ignore Risky Clauses folder
+Data/Risky Clauses/

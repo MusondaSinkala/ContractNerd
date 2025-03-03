@@ -1,0 +1,69 @@
+### Final Output
+
+1. **Term**: Month-to-month lease starting on September 1, 2024, with a 10-day termination period.
+   - Full Text: Month-to-month lease starting on September 1, 2024, with a 10-day termination period.
+   - Implicated Regulation(s): None directly related.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is standard and does not directly conflict with the provided regulations. It clearly outlines the lease duration and termination notice period.
+   - Confidence Level: High
+   - Key Deciding Factors: Clarity, specificity, and absence of direct conflict with regulations.
+
+2. **Rent**: $4500 per month, due on the 15th day of each month.
+   - Full Text: $4500 per month, due on the 15th day of each month.
+   - Implicated Regulation(s): Rent Regulation
+   - Classification: Risky
+   - Explanation: While the clause is clear, its enforceability depends on compliance with rent control or stabilization laws, which cannot be determined without knowing the building's construction date and location.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential conflict with rent regulations, lack of information on building specifics.
+
+3. **Security Deposit**: $4500, refundable within 15 days after lease termination.
+   - Full Text: $4500, refundable within 15 days after lease termination.
+   - Implicated Regulation(s): None directly addressed in provided regulations.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not appear to conflict with the provided regulations. It specifies the deposit amount and refund terms.
+   - Confidence Level: High
+   - Key Deciding Factors: Clarity, specificity, and absence of direct conflict with regulations.
+
+4. **Late Fee**: $50 for each late payment cycle.
+   - Full Text: $50 for each late payment cycle.
+   - Implicated Regulation(s): Lease Provisions (reasonableness)
+   - Classification: Risky
+   - Explanation: The reasonableness of the late fee amount ($50) cannot be determined without further context, potentially making it risky.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential issue with reasonableness, lack of context.
+
+5. **Pre-Payment of Rent**: $4500, non-refundable, for the period from August 1, 2024, to August 31, 2024.
+   - Full Text: $4500, non-refundable, for the period from August 1, 2024, to August 31, 2024.
+   - Implicated Regulation(s): Lease Provisions (clarity and reasonableness)
+   - Classification: Risky
+   - Explanation: The non-refundable nature of the pre-payment may be seen as unfair or unreasonable, potentially conflicting with lease provision standards.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential conflict with lease provision standards regarding fairness and reasonableness.
+
+6. **Payment Methods**: ACH, cash, or check.
+   - Full Text: ACH, cash, or check.
+   - Implicated Regulation(s): None directly addressed.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not conflict with the provided regulations. It specifies accepted payment methods.
+   - Confidence Level: High
+   - Key Deciding Factors: Clarity, specificity, and absence of direct conflict with regulations.
+
+7. **Utilities and Services**: Tenant is responsible for all utilities and services.
+   - Full Text: Tenant is responsible for all utilities and services.
+   - Implicated Regulation(s): None directly addressed.
+   - Classification: Non-risky Enforceable
+   - Explanation: This is a standard lease term and does not conflict with the provided regulations.
+   - Confidence Level: High
+   - Key Deciding Factors: Clarity, specificity, and absence of direct conflict with regulations.
+
+8. **Move-In Inspection**: Required to protect the liability of the Tenant and the Security Deposit.
+   - Full Text: Required to protect the liability of the Tenant and the Security Deposit.
+   - Implicated Regulation(s): Lease Provisions (clarity and reasonableness)
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause supports lease provision clarity and reasonableness by protecting both parties' interests.
+   - Confidence Level: High
+   - Key Deciding Factors: Clarity, specificity, and alignment with lease provision standards.
+
+9. **Pets**: No pets allowed, except for service animals or emotional support animals with proper documentation.
+   - Full Text: No pets allowed, except for service animals or emotional support animals with proper documentation.
+   - Implicated Regulation(s): Fair Housing Practices

@@ -1,0 +1,79 @@
+### Final Output
+
+1. **Clause 1: Parties and Property**
+   - Full Text: Identification of landlord, tenant, and property.
+   - Implicated Regulation(s): Leases must be legally binding contracts.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause clearly identifies the parties and property involved, which is a fundamental requirement for a legally binding contract.
+   - Confidence Level: High
+   - Key Deciding Factors: Clear identification of parties and property.
+
+2. **Clause 2: Term**
+   - Full Text: Month-to-month lease, 10-day termination period.
+   - Implicated Regulation(s): Lease term requirements.
+   - Classification: Risky
+   - Explanation: While the clause complies with general lease term requirements, the 10-day termination period may not comply with specific regulations, introducing uncertainty.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential non-compliance with specific termination period regulations.
+
+3. **Clause 3: Rent**
+   - Full Text: Monthly rent of $4,500, due on the 15th of each month.
+   - Implicated Regulation(s): Rent Regulation.
+   - Classification: Risky
+   - Explanation: The rent may exceed allowed limits under rent control or stabilization laws, posing a risk of non-compliance.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential non-compliance with rent control or stabilization laws.
+
+4. **Clause 4: Security Deposit**
+   - Full Text: $4,500 security deposit, returned within 15 days after lease termination.
+   - Implicated Regulation(s): Security deposit return requirements.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause complies with requirements for security deposit return, posing no apparent risk.
+   - Confidence Level: High
+   - Key Deciding Factors: Compliance with security deposit return regulations.
+
+5. **Clause 5: Late Fee**
+   - Full Text: $50 late fee for each occurrence of late rent payment.
+   - Implicated Regulation(s): Late fee regulations.
+   - Classification: Risky
+   - Explanation: The late fee may exceed allowed limits, introducing uncertainty and potential non-compliance.
+   - Confidence Level: Medium
+   - Key Deciding Factors: Potential non-compliance with late fee regulations.
+
+6. **Clause 6: Pre-Payment of Rent**
+   - Full Text: Pre-payment of $4,500 for August 1-31, 2024.
+   - Implicated Regulation(s): Pre-payment regulations.
+   - Classification: Risky
+   - Explanation: There is uncertainty regarding compliance with regulations on pre-payment of rent, posing a risk.
+   - Confidence Level: Low
+   - Key Deciding Factors: Uncertainty about compliance with pre-payment regulations.
+
+7. **Clause 7: Acceptable Payment Methods**
+   - Full Text: ACH, cash, and check accepted.
+   - Implicated Regulation(s): Payment method requirements.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause complies with requirements for payment methods, posing no apparent risk.
+   - Confidence Level: High
+   - Key Deciding Factors: Compliance with payment method regulations.
+
+8. **Clause 8: Utilities and Services**
+   - Full Text: Tenant responsible for all utilities and services not specified as landlord's responsibility.
+   - Implicated Regulation(s): Lease provision requirements.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause complies with lease provision requirements, posing no apparent risk.
+   - Confidence Level: High
+   - Key Deciding Factors: Compliance with lease provision regulations.
+
+9. **Clause 9: Furniture and Appliances**
+   - Full Text: Property is not furnished.
+   - Implicated Regulation(s): Lease provision requirements.
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause complies with lease provision requirements, posing no apparent risk.
+   - Confidence Level: High
+   - Key Deciding Factors: Compliance with lease provision regulations.
+
+### Uncertainty Documentation
+- **Clause 2: Term**: Uncertainty regarding the compliance of the 10-day termination period with specific regulations.
+- **Clause 3: Rent**: Potential non-compliance with rent control or stabilization laws if the rent exceeds allowed limits or increases.
+- **Clause 5: Late Fee**: Potential non-compliance if the late fee exceeds allowed limits.
+- **Clause 6: Pre-Payment of Rent**: Uncertainty regarding compliance with regulations on pre-payment of rent.

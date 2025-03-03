@@ -1,0 +1,23 @@
+**Final Output:**
+
+1. **Term:** The lease is a month-to-month lease starting on 01 September 2024 with a termination period of 10 days.
+   - Classification: Non-risky Enforceable
+   - Reasoning: The clause is clear and specific, with no ambiguity or uncertainty.
+   - Confidence Level: High
+
+2. **Security Deposit:** The security deposit is $4500, to be returned to the tenant 15 days after lease termination.
+   - Classification: Unenforceable
+   - Reasoning: The clause violates the regulation requiring the security deposit to be returned within 14 days of lease termination.
+   - Confidence Level: High
+
+3. **Late Fee:** The late fee is a fixed amount of $50 for each late cycle.
+   - Classification: Non-risky Enforceable
+   - Reasoning: The clause is clear and specific, with no ambiguity or uncertainty.
+   - Confidence Level: High
+
+4. **Utilities & Services:** The landlord is not responsible for any utilities and services.
+   - Classification: Risky (but enforceable)
+   - Reasoning: The clause may be non-compliant with the regulation requiring the landlord to provide a safe, habitable rental unit if the lack of utilities and services compromises the habitability of the unit.
+   - Confidence Level: Medium (due to uncertainty about the impact of the lack of utilities and services on the habitability of the unit)
+
+Note: The classification of the Utilities & Services clause is uncertain due to the lack of information about the specific utilities and services and their impact on the habitability of the unit. Further clarification or information is needed to determine compliance.

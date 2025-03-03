@@ -1,0 +1,101 @@
+### Final Output
+
+1. **Clause 1: Parties and Property**
+   - Full Text: Identification of landlord, tenant, and property.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is straightforward and does not directly conflict with any provided regulations.
+   - Confidence Level: High
+
+2. **Clause 2: Term**
+   - Full Text: Month-to-month lease, 10-day termination period.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause does not directly address any of the listed regulations.
+   - Confidence Level: High
+
+3. **Clause 3: Rent**
+   - Full Text: $4500 per month, due on the 15th day of each month.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not conflict with the provided regulations.
+   - Confidence Level: High
+
+4. **Clause 4: Security Deposit**
+   - Full Text: $4500, refundable within 15 days after lease termination.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is straightforward and does not directly conflict with any provided regulations.
+   - Confidence Level: High
+
+5. **Clause 5: Late Fee**
+   - Full Text: $50 for each late payment cycle.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not conflict with the provided regulations.
+   - Confidence Level: High
+
+6. **Clause 6: Pre-Payment of Rent**
+   - Full Text: $4500, non-refundable, for August 1, 2024, to August 31, 2024.
+   - Implicated Regulation(s): Potential issue with refundability and advance payment, but not directly addressed by the listed regulations.
+   - Classification: Risky
+   - Explanation: The non-refundable nature of the pre-payment could be seen as unfair, but without direct regulation, it's classified as risky rather than unenforceable.
+   - Confidence Level: Medium
+
+7. **Clause 7: Payment Methods**
+   - Full Text: ACH, cash, or check.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not conflict with any provided regulations.
+   - Confidence Level: High
+
+8. **Clause 8: Utilities and Services**
+   - Full Text: Tenant is responsible for all utilities and services.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is straightforward and does not directly conflict with any provided regulations.
+   - Confidence Level: High
+
+9. **Clause 9: Furniture and Appliances**
+   - Full Text: Property is not furnished and has no appliances.
+   - Implicated Regulation(s): None
+   - Classification: Non-risky Enforceable
+   - Explanation: This clause is clear and does not conflict with the provided regulations.
+   - Confidence Level: High
+
+10. **Clause 10: Move-In Inspection**
+    - Full Text: Required.
+    - Implicated Regulation(s): None
+    - Classification: Non-risky Enforceable
+    - Explanation: This clause is straightforward and does not directly conflict with any provided regulations.
+    - Confidence Level: High
+
+11. **Clause 11: Common Areas and Parking**
+    - Full Text: None provided.
+    - Implicated Regulation(s): None
+    - Classification: Non-risky Enforceable
+    - Explanation: Lack of information does not imply a conflict with regulations.
+    - Confidence Level: High
+
+12. **Clause 12: Pets**
+    - Full Text: Not allowed, except for service animals or emotional support animals with proper documentation.
+    - Implicated Regulation(s): Aligns with fair housing practices.
+    - Classification: Non-risky Enforceable
+    - Explanation: This clause respects fair housing practices and does not conflict with provided regulations.
+    - Confidence Level: High
+
+13. **Clause 13: Subletting**
+    - Full Text: Not allowed.
+    - Implicated Regulation(s): § 226-b
+    - Classification: Risky
+    - Explanation: The clause may violate the tenant’s right to sublet with advance consent if the building has four or more apartments, but the building size and reasonableness of the landlord’s denial are unknown.
+    - Confidence Level: Medium
+
+14. **Clause 14: Renters Insurance**
+    - Full Text: Not provided for analysis.
+    - Implicated Regulation(s): None
+    - Classification: Uncertain
+    - Explanation: Lack of information prevents classification.
+    - Confidence Level: Low
+
+Given the analysis, Clauses 6 and 13 are considered risky due to potential issues with refundability and subletting rights, respectively. However, the confidence level for these classifications is medium due to uncertainties regarding the application of specific regulations to the details of the lease agreement.
