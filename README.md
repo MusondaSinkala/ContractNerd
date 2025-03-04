@@ -1,5 +1,5 @@
 # ContractNerd
-An AI-powered tool for analyzing contracts and identifying risky clauses.
+An LLM-powered tool for analyzing contracts and identifying risky clauses.
 
 ### Project Overview
 
