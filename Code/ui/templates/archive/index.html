@@ -83,19 +83,27 @@
             font-size: 14px;
             color: #555;
         }
-        .disclaimer {
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
+        .highlight-unenforceable {
+            background-color: red;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
         }
-        .find-lawyer {
-            font-size: 14px;
-            color: #1E90FF;
-            text-decoration: none;
+        .highlight-risky {
+            background-color: orange;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
         }
-        .find-lawyer:hover {
-            text-decoration: underline;
+        .highlight-nonrisky {
+            background-color: green;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .legend {
+            margin-top: 10px;
+            font-size: 14px;
         }
         .results-container {
             margin-top: 20px;
@@ -119,68 +127,48 @@
 
         <div class="form-container">
             <div class="header">
-<!--                <img src="contractnerds_logo.jpg" alt="Contract Nerd Logo">-->
                 <img src="{{ url_for('static', filename='contractnerds_logo.jpg') }}" alt="Contract Nerd Logo">
                 <h2>Contract Nerd</h2>
             </div>
 
             <p class="description">
-                Contract Nerd is designed to assist second parties in identifying unreasonable contracts and unconscionable clauses. Please upload a PDF of the contract and the relevant legal document for analysis.
+                Contract Nerd is designed to assist second parties in identifying unreasonable contracts and unconscionable clauses.
             </p>
-
-            <p>
-                <a class="find-lawyer" href="https://www.google.com/search?q=lawyers+near+me&oq=lawyers+near+me&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORixAxjJAxiABDINCAEQABiSAxiABBiKBTINCAIQABiSAxiABBiKBTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDUwMDJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">Find a lawyer near you</a>
+            <p class="description">
+                Select the jurisdiction and contract type below, then upload a contract for analysis.
             </p>
 
             <form id="analysis-form" enctype="multipart/form-data">
-                <label for="contract">Upload Contract (PDF):</label>
-                <input type="file" id="contract" name="contract" required accept="application/pdf">
+                <label for="jurisdiction">Select Jurisdiction:</label>
+                <select id="jurisdiction" name="jurisdiction" required>
+                    <option value="" disabled selected>-- Select --</option>
+                    <option value="New York">New York</option>
+                    <option value="California">California</option>
+                    <option value="Illinois">Illinois</option>
+                </select>
 
-                <label for="law">Upload Legal Document (PDF):</label>
-                <input type="file" id="law" name="law" required accept="application/pdf">
+                <label for="contractType">Select Contract Type:</label>
+                <select id="contractType" name="contractType" required>
+                    <option value="" disabled selected>-- Select --</option>
+                    <option value="Employment">Employment</option>
+                    <option value="Rental">Rental</option>
+                    <option value="Service">Service</option>
+                </select>
+
+                <label for="contract">Upload Contract (PDF):</label>
+                <input type="file" id="contract" name="contract" accept="application/pdf">
 
                 <button type="submit">Analyze</button>
             </form>
-
+            <div class="legend">
+                <b>Legend:</b>
+                <span class="highlight-unenforceable">Unenforceable</span>
+                <span class="highlight-risky">Risky (but enforceable)</span>
+                <span class="highlight-nonrisky">Non-risky Enforceable</span>
+            </div>
             <h2>Analysis Results:</h2>
             <div id="result" class="results-container"></div>
         </div>
     </div>
-
-    <script>
-        document.getElementById("analysis-form").onsubmit = async function(event) {
-            event.preventDefault();
-
-            let contractFile = document.getElementById("contract").files[0];
-            let lawFile = document.getElementById("law").files[0];
-
-            if (!contractFile || !lawFile) {
-                alert("Please upload both the contract and legal document.");
-                return;
-            }
-
-            let formData = new FormData();
-            formData.append("contract", contractFile);
-            formData.append("law", lawFile);
-
-            document.getElementById("result").innerHTML = "Analyzing...";
-
-            let response = await fetch("/analyze", {
-                method: "POST",
-                body: formData
-            });
-
-            let data = await response.json();
-
-            if (data.error) {
-                document.getElementById("result").innerHTML = "Error: " + data.error;
-            } else {
-                document.getElementById("result").innerHTML = JSON.stringify(data.result, null, 2)
-                    .replace(/Final Output/g, '')  // Remove "Final Output"
-                    .replace(/\*\*/g, '')          // Remove all "**"
-                    .replace(/### /g, '');         // Remove "###"s
-            }
-        };
-    </script>
 </body>
 </html>
