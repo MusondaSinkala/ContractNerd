@@ -9,6 +9,9 @@ from base.clause_comparison import clause_comparison
 
 app = Flask(__name__, template_folder = 'ui/templates')
 
+# Get the project root directory
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
 # Folder where uploaded files are stored
 UPLOAD_FOLDER      = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf'}
@@ -52,13 +55,14 @@ def analyze():
             contract_file.save(contract_path)
 
         # Map jurisdiction and contract type to the correct legal document
-        legal_doc_path = f"D:/Downloads/Academics/Capstone Project/Data/Regulations/{contract_type}/{jurisdiction}/regulations.pdf"
+        # legal_doc_path = os.path.join(os.getcwd(), 'Data', 'Regulations', contract_type, jurisdiction, 'regulations.pdf')
+        legal_doc_path = os.path.join(project_root, 'Data', 'Regulations', contract_type, jurisdiction, 'regulations.pdf')
 
         # Call clause_comparison function
         final_evaluation  = clause_comparison(
             contract_path = contract_path,
             law_path      = legal_doc_path,
-            risky_clauses = os.path.join(os.getcwd(), 'Data', 'Risky Clauses', contract_type, jurisdiction, 'risky_clauses.txt'),
+            risky_clauses = os.path.join(project_root, 'Data', 'Risky Clauses', contract_type, jurisdiction, 'risky_clauses.txt'),
             # risky_clauses = f"D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/{contract_type}/{jurisdiction}/risky_clauses.txt",
             model         = 'Meta-Llama-3.3-70B-Instruct',
             role          = "user",
