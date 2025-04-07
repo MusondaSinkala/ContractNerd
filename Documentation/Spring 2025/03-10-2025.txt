@@ -1,0 +1,4 @@
+unenforceable - red
+swap red and yellow
+
+aim is to suggest how the clause should be changed. 

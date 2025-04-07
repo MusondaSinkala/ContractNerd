@@ -1,6 +1,10 @@
 import os
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
+
+# Set the working directory to the project root (Code directory)
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 from base.clause_comparison import clause_comparison
 
 app = Flask(__name__, template_folder = 'ui/templates')
@@ -55,7 +59,7 @@ def analyze():
             contract_path = contract_path,
             law_path      = legal_doc_path,
             risky_clauses = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses.pkl",
-            model         = 'Meta-Llama-3.1-70B-Instruct',
+            model         = 'Meta-Llama-3.3-70B-Instruct',
             role          = "user",
             api_key       = "893bd5f1-b41e-4d17-ab1d-3ee3c7cba82b",
             api_base      = "https://api.sambanova.ai/v1",

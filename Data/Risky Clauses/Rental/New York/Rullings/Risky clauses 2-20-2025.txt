@@ -1,0 +1,237 @@
+1.  Case: 159 MP Corp. v. Redbridge Bedford, LLC
+    Clause: "Tenant waives the right to bring a declaratory judgment action with respect to any provision of this lease."
+    Ruling: The New York Court of Appeals upheld the enforceability of the waiver clause, leading to the dismissal of the tenants' declaratory judgment action.
+    Reason: The court determined that the waiver was clear and unambiguous, and that such waivers in commercial leases are enforceable under New York law.
+    Classification: "Risky enforceable"
+
+
+2.  Case: Rodriguez v. Beulah Commons Assoc., L.P.
+    Clause: "Tenant agrees to indemnify and hold harmless the landlord from any claims arising from the tenant's use of the premises."
+    Ruling: The court found that the indemnification clause did not apply to the landlord's own negligence and denied the landlord's motion for summary judgment.
+    Reason: New York law prohibits landlords from exempting themselves from liability for their own negligence through lease agreements. 
+    Classification: "Unenforceable"
+
+
+3.  Case: United Grand Corp. v. Malibu Hillbillies, LLC
+    Clause: "Tenant shall not assign the lease or sublet the premises without the landlord's prior written consent."
+    Ruling: The California Court of Appeal ruled in favor of the landlord, stating that the tenant's unauthorized assignment constituted a breach of the lease.
+    Reason: The court held that the lease's clear prohibition against assignment without consent was enforceable, and the tenant's violation justified termination of the lease. 
+    Classification: "Non-risky enforceable"
+
+
+5.  Case: Daisy May Cooper v. Rebecca Ferry
+    Clause: "Tenant shall not make alterations to the property without the landlord's prior written consent."
+    Ruling: The landlord initiated legal action, claiming the tenant's unauthorized redecoration violated the lease terms.
+    Reason: The dispute centers on whether the tenant obtained proper consent for alterations, highlighting the importance of adhering to lease provisions regarding property modifications. 
+    Classification: "Non-risky enforceable"
+
+
+6.  Case: Hollywood Park Short-Term Rental Litigation
+    Clause: "The property shall be used solely for residential purposes and not for transient occupancy."
+    Ruling: The town settled the lawsuit, allowing certain plaintiffs to continue short-term rentals under specific conditions.
+    Reason: The settlement acknowledged the plaintiffs' vested rights while upholding the town's ordinance banning future short-term rentals, balancing individual and community interests. 
+    Classification: "Non-risky enforceable"
+
+
+7.  Case: UK Ministry of Defence v. Annington Property Ltd.
+    Clause: "The properties are leased back to the Ministry of Defence under a long-term agreement with periodic rent reviews."
+    Ruling: The UK government agreed to pay nearly £6 billion to terminate the lease agreement and regain ownership of the properties.
+    Reason: The original privatization deal was deemed financially disadvantageous, and the buyback aimed to rectify unfavorable terms and reduce long-term costs. 
+    Classification: "Non-risky enforceable"
+
+
+8.  Case: Amy Duggar's Husband v. Hachem Investments
+    Clause: "Tenant agrees to pay rent on the first day of each month without demand."
+    Ruling: The court ordered the tenant to pay $236,728.08 in unpaid rent.
+    Reason: The tenant's failure to fulfill the clear payment terms of the lease resulted in a substantial arrearage, justifying the court's judgment for the landlord. 
+    Classification: "Non-risky enforceable"
+
+
+9.  Clause: "Tenant shall not harbor pets on the premises without the landlord's prior written consent."
+    Ruling: The court found in favor of the landlord, determining that the tenant's unauthorized keeping of pets constituted a breach of the lease.
+    Reason: The explicit prohibition in the lease against pets without consent was enforceable, and the tenant's violation warranted legal remedy. 
+    Classification: "Non-risky enforceable"
+
+
+10. Case: Landlord v. Tenant (Commercial Lease with Liquidated Damages Clause)
+    Clause: "In the event of tenant's breach, tenant shall pay liquidated damages in the amount of six months' rent."
+    Ruling: The Supreme Judicial Court upheld the enforceability of the liquidated damages clause.
+    Reason: The court determined that the clause provided a reasonable estimate of potential damages and was not a penalty, thus enforceable under contract law. 
+    Classification: "Risky enforceable"
+
+
+11. Case: Arnold v Britton 
+    Clause: "Tenant agrees to pay an annual service charge of £90, increasing by 10% each year."
+    Ruling: The UK Supreme Court held that the tenants were bound by the clear terms of the lease, requiring them to pay the escalating service charges as stipulated.
+    Reason: The court emphasized that the language of the contract was unambiguous, and it was not the role of the court to relieve parties from imprudent agreements.
+    Classification: "Risky enforceable"
+
+
+12. Clause: "Landlord reserves the right to terminate the lease upon providing a 30-day notice without cause."
+    Ruling: Connecticut lawmakers are debating a "just cause" eviction bill that would prevent landlords from evicting tenants without a legitimate reason, potentially invalidating such clauses.
+    Reason: The proposed legislation aims to protect tenants from arbitrary evictions, ensuring that landlords provide a valid reason for termination to prevent abuse of power.
+    Classification: "Unenforceable"
+
+
+13. Case: Dostie v. Marowitz
+    Clause: "Tenant shall not engage in any behavior deemed disruptive or offensive by the Landlord."
+    Ruling: The California Supreme Court upheld a $60,000 award against a landlord who misgendered a tenant, considering it discriminatory behavior.
+    Reason: The court found that the landlord's actions constituted discrimination based on gender identity, violating state anti-discrimination laws, regardless of any lease clauses to the contrary.
+    Classification: "Risky enforceable"
+
+
+14. Clause: "Tenant is responsible for all utilities and maintenance of the premises."
+    Ruling: In a New York case, the court found the tenant failed to pay rent and did not maintain the property as required, leading to a ruling in favor of the landlord.
+    Reason: Evidence showed the tenant neglected maintenance responsibilities and withheld rent without valid justification, breaching the lease terms.
+    Classification: "Risky enforceable"
+
+
+15. Clause: "Tenant must vacate the premises upon lease expiration without holdover."
+    Ruling: A tenant remained in the property after lease expiration, leading the landlord to file for eviction. The court ruled in favor of the landlord, enforcing the lease's holdover provision.
+    Reason: The tenant's failure to vacate constituted a breach of the lease agreement, and the holdover clause clearly outlined the consequences of such actions.
+    Classification: "Non-risky enforceable"
+
+
+16. Case: Vidya Drolia and Others v. Durga Trading Corporation 
+    Clause: "Any disputes arising from this lease shall be resolved through arbitration."
+    Ruling: The Supreme Court of India held that landlord-tenant disputes under the Transfer of Property Act are arbitrable, except when governed by rent control legislations.
+    Reason: The court determined that arbitration clauses in leases are valid and enforceable, promoting alternative dispute resolution mechanisms, unless specific rent control laws apply.
+    Classification: "Risky enforceable"
+
+    
+17. Clause: "Tenant shall not sublet the premises without prior written consent from the Landlord."
+    Ruling: A tenant sublet the apartment without obtaining the landlord's consent. The court ruled this action as a breach of the lease agreement, allowing the landlord to terminate the lease.
+    Reason: The explicit prohibition of subletting without consent in the lease was violated, justifying the landlord's decision to terminate the tenancy.
+    Classification: "Non-risky enforceable"
+
+
+18. Clause: "Tenant agrees to indemnify the Landlord against all liabilities arising from the Tenant's use of the premises."
+    Ruling: A tenant's guest was injured on the property due to the tenant's negligence. The court upheld the indemnity clause, requiring the tenant to cover the landlord's legal expenses and damages.
+    Reason: The indemnity clause was clear in its intent to protect the landlord from liabilities caused by the tenant's actions, and the tenant's negligence directly led to the injury.
+    Classification: "Risky enforceable"
+
+
+19. Clause: "Tenant shall not make any alterations to the premises without the Landlord's written approval."
+    Ruling: The tenant made significant modifications to the property without seeking the landlord's consent. The court found the tenant in breach of the lease and ordered restitution for restoring the premises to its original condition.
+    Reason: Unauthorized alterations violated the lease terms, and the landlord was entitled to have the property returned to its original state, as per the agreement.
+    Classification: "Non-risky enforceable"
+
+
+20. Case: Javins v. First National Realty Corp.
+    Clause: "Tenant shall not engage in illegal activities on the premises."
+    Ruling: Evidence of illegal drug activities led the landlord to seek eviction. The court ruled in favor of the landlord, citing the tenant's breach of the lease's illegal activity clause.
+    Reason: Engaging in illegal activities constituted a material breach of the lease, providing sufficient grounds for
+    Classification: "Non-risky enforceable"
+
+
+21. Clause: "Tenant agrees to maintain the premises in good repair and comply with all applicable housing regulations."
+    Ruling: The court held that a warranty of habitability is implied in residential leases, obligating landlords to maintain livable conditions. Tenants may withhold rent if this warranty is breached.
+    Reason: The decision recognized the modern urban tenant's reliance on landlords for safe and habitable housing, shifting away from traditional property law doctrines. 
+    Classification: "Non-risky enforceable"
+
+
+22. Case: Mak v. City of Berkeley Rent Stabilization Board
+    Clause: "Landlord reserves the right to lease adjacent spaces and is not responsible for disturbances arising therefrom."
+    Ruling: The court found that the landlord's inaction, allowing another tenant to obstruct light and air, constituted constructive eviction.
+    Reason: The landlord's failure to prevent substantial interference with the tenant's use and enjoyment of the premises breached the implied covenant of quiet enjoyment.
+    Classification: "Risky enforceable"
+
+
+23. Case: Ansel Postell v. Campus Advantage
+    Clause: "Landlord may terminate tenancy for owner move-in purposes with proper notice."
+    Ruling: The court upheld the city's presumption that tenants vacated due to owner move-in notices, preventing landlords from circumventing rent control by falsely claiming owner occupancy.
+    Reason: This interpretation enforces rent control regulations, ensuring landlords do not misuse owner move-in provisions to raise rents unlawfully. 
+    Classification: "Risky enforceable"
+
+
+24. Case: Cory Dostie v. Andrew Marowitz
+    Clause: "Landlord may enter and remove tenant's belongings if rent is unpaid for 30 days."
+    Ruling: The jury awarded the tenant $692,000 in damages after the landlord unlawfully disposed of his belongings despite rent being paid.
+    Reason: The landlord's actions constituted conversion and breach of contract, as they failed to verify payment before removing the tenant's property. 
+    Classification: "Unenforceable"
+
+
+25. Clause: "Landlord shall not discriminate against tenants based on gender identity."
+    Ruling: The California Supreme Court upheld a $60,000 award to the tenant, finding the landlord guilty of discrimination through consistent misgendering.
+    Reason: The ruling reinforced state laws prohibiting discrimination based on gender identity, emphasizing landlords' duty to respect tenants' identities. 
+    Classification: "Non-risky enforceable"
+
+
+26. Case: Ellie Mae McNulty v. Alden Marin
+    Clause: "Tenant shall be liable for early termination fees as specified."
+    Ruling: The landlord reported an alleged debt for early termination to credit bureaus without court adjudication, significantly impacting the tenant's credit score.
+    Reason: This practice highlights the power imbalance, where landlords can unilaterally report debts, urging the need for legal oversight to protect tenants' rights. 
+    Classification: "Risky enforceable"
+
+
+27. Clause: "Guests may not establish residency without landlord's consent."
+    Ruling: The tenant exploited tenant-friendly laws to claim residency rights without a formal lease, leading to prolonged legal battles for eviction.
+    Reason: The case underscores challenges landlords face when informal agreements are made, emphasizing the necessity for clear, written consent for extended guest stays. 
+    Classification: "Non-risky enforceable"
+
+
+28. Clause: "Landlord shall provide habitable premises and address necessary repairs promptly."
+    Ruling: The court ruled in favor of the tenant, allowing rent withholding due to the landlord's failure to maintain habitable living conditions.
+    Reason: This decision reinforces the implied warranty of habitability, holding landlords accountable for timely repairs and maintenance. 
+    Classification: "Non-risky enforceable"
+
+
+29. Clause: "Landlord reserves the right to conduct background checks on all applicants."
+    Ruling: The Ninth Circuit revived a tenant's lawsuit against a screening company after being denied housing due to outdated criminal history information.
+    Reason: The case highlights the importance of accurate and current information in tenant screenings, protecting applicants from unjust denials. 
+    Classification: "Non-risky enforceable"
+
+
+30. Clause: "Landlord may terminate tenancy with a 30-day notice without cause."
+    Ruling: Connecticut lawmakers debated a 'just cause' eviction bill to prevent landlords from evicting tenants without legitimate reasons.
+    Reason: The proposed legislation aims to protect tenants from arbitrary evictions, ensuring stability and fairness in rental agreements.
+    Classification: "Unenforceable"
+
+
+31. Case: Lindsey v. Normet, 405 U.S. 56 (1972) 
+    Clause: "Tenant shall not engage in any unlawful activity on the premises."
+    Ruling: In Lindsey v. Normet, the U.S. Supreme Court upheld the constitutionality of Oregon's Forcible Entry and Wrongful Detainer (FED) Statute, which allowed for expedited eviction proceedings when tenants were alleged to have violated lease terms, including engaging in unlawful activities.
+    Reason: The Court determined that the expedited process did not violate due process or equal protection rights, emphasizing the state's interest in promptly restoring possession to landlords when tenants breach lease terms.
+    Classification: "Non-risky enforceable"
+
+
+32. Case: Smith v. Wakefield, LP, 462 Md. 713 (2019) 
+    Clause: "Tenant agrees to pay all rent and additional charges promptly on the first day of each month."
+    Ruling: In Smith v. Wakefield, LP, the Maryland Court of Appeals held that actions for back rent under residential leases are subject to a three-year statute of limitations, regardless of lease provisions that might suggest otherwise.
+    Reason: The court found that even if a lease includes clauses attempting to extend the period for collecting unpaid rent, such provisions cannot override the state's statutory limitations period.
+    Classification: "Risky enforceable"
+
+
+33. Case: Schneiker v. Gordon, 732 P.2d 603 (Colo. 1987) 
+    Clause: "Tenant shall not assign or sublet the premises without prior written consent from the landlord."
+    Ruling: In Schneiker v. Gordon, the Colorado Supreme Court recognized that while leases are traditionally governed by property law, contract principles can also apply, especially concerning clauses like assignment and subletting.
+    Reason: The court acknowledged the dual nature of leases as both conveyances and contracts, indicating that contractual obligations, such as obtaining consent for subletting, are enforceable under contract law principles.
+    Classification: "Risky enforceable"
+
+
+34. Case: Graham Court Owners Corp. v. Taylor, 115 A.D.3d 50 (N.Y. App. Div. 2014)
+    Clause: "Tenant shall be responsible for all attorney fees incurred due to breach of this lease agreement."
+    Ruling: In Graham Court Owners Corp. v. Taylor, the Appellate Division, First Department, expanded tenants' rights to recover legal fees, ruling that if a lease allows landlords to collect attorney fees from tenants, the same right is reciprocally available to tenants who prevail in disputes.
+    Reason: The court interpreted the reciprocal attorney's fees provision to ensure fairness, preventing landlords from having an undue advantage in legal disputes arising from the lease.
+    Classification: "Risky enforceable"
+
+
+35. Case: 513 West 26th Realty LLC v. George Billis Galleries Inc. (N.Y. Sup. Ct. 2023) 
+    Clause: "Tenant waives the right to a jury trial in any litigation arising from this lease agreement."
+    Ruling: In 513 West 26th Realty LLC v. George Billis Galleries Inc., the New York Supreme Court addressed the enforceability of certain lease provisions, including waivers of jury trials, in the context of the COVID-era personal guaranty relief statute.
+    Reason: The court examined whether such waivers, among other clauses, violated the Contracts Clause of the U.S. Constitution, ultimately determining that certain statutory protections could override specific lease provisions to address unprecedented circumstances.
+    Classification: "Risky enforceable"
+
+
+36. Case: Myrah v. Campbell, 2007 UT App 98 
+    Clause: "Tenant must provide written notice of intent to vacate at least 60 days prior to lease termination."
+    Ruling: In Myrah v. Campbell, the Utah Court of Appeals dealt with a dispute where the tenant failed to provide the required notice before vacating, leading the landlord to seek damages for breach of contract.
+    Reason: The court upheld the landlord's claim for damages, emphasizing the enforceability of clear and unambiguous notice provisions in lease agreements, which are crucial for landlords to manage their properties effectively.
+    Classification: "Risky enforceable"
+
+
+37. Case: Lindsey v. Normet, 405 U.S. 56 (1972)
+    Clause: "Tenant shall not withhold rent for any reason without the landlord's prior written consent."
+    Ruling: In Lindsey v. Normet, tenants argued that substandard conditions justified withholding rent; however, the U.S. Supreme Court upheld the state's eviction process, which did not permit rent withholding without following specific legal procedures.
+    Reason: The Court emphasized the importance of adhering to established legal remedies and procedures for addressing grievances, rather than unilateral actions like withholding rent, which could disrupt contractual obligations.
+    Classification: "Risky enforceable"

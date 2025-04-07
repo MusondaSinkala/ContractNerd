@@ -1,0 +1,36 @@
+SET 1:
+TRUE:
+Risky enforceable: 17 clauses
+Non-risky enforceable: 16 clauses
+Unenforceable: 4 clauses
+Total: 37
+
+CONFUSION MATRIX:
+			 {combine these two}  
+		Unen     RE     NRE
+Unenforceable    3       0       1
+Risky enf        3       10      4
+Non-risky enf    0       2       14
+​
+
+Accuracy: 73%
+Classification	               Precision	Recall
+Unenforceable     	          0.50	         0.75
+Risky Enforceable                 0.83           0.59
+Non-risky Enforceable (NRE)	  0.78           0.93
+  
+​--> Enforceable (Risky) vs Non-enforceable - perhaps split between two categories
+--> With p-values - given some larger sample, what's the p-value that we'd get the same distribution as seen above
+--> in it's current state, this is a non-parametric test
+
+SET 2:
+TRUE:
+Risky enforceable: 9 clauses
+Non-risky enforceable: 49 clauses
+Unenforceable: 1 clause
+
+PREDICTION:
+
+Risky enforceable: 3 clauses
+Non-risky Enforceable: 55 clauses
+Unenforceable: 1 clause

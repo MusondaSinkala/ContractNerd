@@ -93,6 +93,28 @@
             max-height: 300px;
             overflow-y: auto;
         }
+        .highlight-unenforceable {
+            background-color: red;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-risky {
+            background-color: orange;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .highlight-nonrisky {
+            background-color: green;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .legend {
+            margin-top: 10px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -136,6 +158,12 @@
 
                 <button type="submit">Analyze</button>
             </form>
+            <div class="legend">
+                <b>Legend:</b>
+                <span class="highlight-unenforceable">Unenforceable</span>
+                <span class="highlight-risky">Risky (but enforceable)</span>
+                <span class="highlight-nonrisky">Non-risky Enforceable</span>
+            </div>
 
             <h2>Analysis Results:</h2>
             <div id="result" class="results-container"></div>
