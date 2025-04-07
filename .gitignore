@@ -5,7 +5,9 @@ venv/
 Code/base/archive/
 Code/ui/archive/
 
-# Ignore Risky Clauses folder
-Data/Risky Clauses/Rental/New York/Clauses/risky_clauses - new.pkl
-Data/Risky Clauses/Rental/New York/Clauses/risky_clauses.pkl
-Data/Risky Clauses/Rental/New York/risky_clauses.pkl
+# Ignore python-generated folders
+**/__pycache__/
+
+
+# Ignore pkl files
+*.pkl

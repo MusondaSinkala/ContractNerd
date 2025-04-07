@@ -53,7 +53,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
             top_p       = top_p,
             max_tokens  = max_tokens,
         )
-        print(response.choices[0].message.content)
+        # print(response.choices[0].message.content)
         return response.choices[0].message.content
 
     # Function to conduct few shot learning to classify "risky" clauses
@@ -190,10 +190,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     # Read the contract file
     contract_text = read_pdf_pymupdf(contract_path)
 
-    # Load risky clauses from file
-    with open(risky_clauses, 'rb') as file:
-        loaded_data = pickle.load(file)
-
     # Unpack the list into a string
     risky_clauses_text = ""
     # for item in loaded_data:
@@ -201,13 +197,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
 
     # Read the regulation file
     regulations_text = read_pdf_pymupdf(law_path)
-    # regulation_paths = [
-    #     "/scratch/mks9887/Capstone/Rental/NYC/Laws/The Complete Guide on Landlord Tenant Laws - New York.pdf",
-    #     "/scratch/mks9887/Capstone/Rental/NYC/Laws/Residential tenants’ rights guide.pdf",
-    #     "/scratch/mks9887/Capstone/Rental/NYC/Laws/NYC_tenants_rights.pdf"]
-    # regulations_text = ""
-    # for path in regulation_paths:
-    #     regulations_text += read_pdf_pymupdf(path)
 
     # Extract clauses from the contract
     clauses = extract_info(

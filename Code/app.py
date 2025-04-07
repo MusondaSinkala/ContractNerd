@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 
 # Set the working directory to the project root (Code directory)
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 from base.clause_comparison import clause_comparison
 
@@ -58,7 +58,8 @@ def analyze():
         final_evaluation  = clause_comparison(
             contract_path = contract_path,
             law_path      = legal_doc_path,
-            risky_clauses = f"D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/{contract_type}/{jurisdiction}/risky_clauses.txt",
+            risky_clauses = os.path.join(os.getcwd(), 'Data', 'Risky Clauses', contract_type, jurisdiction, 'risky_clauses.txt'),
+            # risky_clauses = f"D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/{contract_type}/{jurisdiction}/risky_clauses.txt",
             model         = 'Meta-Llama-3.3-70B-Instruct',
             role          = "user",
             api_key       = "893bd5f1-b41e-4d17-ab1d-3ee3c7cba82b",
