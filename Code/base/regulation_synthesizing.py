@@ -1,8 +1,8 @@
 import os
 import glob
 import openai
-# from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
-from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
+from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
+# from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
 
 def synthesize_regulations(source_folder, model, role, api_key, api_base, temperature, top_p, max_tokens):
     # Initialize OpenAI client

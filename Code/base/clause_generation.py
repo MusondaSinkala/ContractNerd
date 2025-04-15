@@ -1,8 +1,8 @@
 import pickle
 import time
 import openai
-# from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
-from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
+from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
+# from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
 
 def clause_generation(contract_path, output_file, model, role, api_base, api_key, temperature, top_p, max_tokens, retries = 5):
     # Define Llama client
