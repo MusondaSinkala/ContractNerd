@@ -13,7 +13,7 @@ def read_pdf_pymupdf(file_path):
 
 def extract_info(document, prompt, client, model, role, temperature, top_p, max_tokens):
     """
-    Extracts information from the given document using the LlamaStackClient.
+    Extracts information from the given document using the specified LLM model.
     """
     response = client.chat.completions.create(
         model       = model,

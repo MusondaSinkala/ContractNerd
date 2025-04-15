@@ -1,8 +1,8 @@
 import pickle
 import openai
 import json
-from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
-# from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
+# from base.utils.functions import read_pdf_pymupdf, extract_info  # If publishing the code using flask
+from utils.functions import read_pdf_pymupdf, extract_info  # If testing locally
 
 def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_base, api_key, temperature, top_p, max_tokens, retries = 5):
     # Define Llama client
@@ -34,7 +34,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                       {contract}
                 
                       Regulations:
-                      {laws[:1000]}
+                      {laws}
                    
                       Remember: If there is significant uncertainty about non-compliance, err on the side of caution and document the uncertainty rather than classifying as non-compliant.
                  """
@@ -64,8 +64,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
 
                      Your goal is to classify each clause as strictly one of the following:
                      - Unenforceable
-                     - Risky (but enforceable)
-                     - Non-risky Enforceable
+                     - Enforceable
 
                      Review the output and compare it against the provided examples of risky clauses.
 
@@ -77,17 +76,17 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                         - Provide justification for your comparison
 
                      2. Final Output:
-                        The final output should classify clauses as unenforceable, risky, or non-risky enforceable after the analysis. For all clause, include:
+                        The final output should classify clauses as unenforceable or enforceable after the analysis. For all clause, include:
                         - The full text of the clause.
                         - The exact regulation(s) or criteria implicated (if classified as unenforceable).
-                        - It's classification (i.e., unenforceable, risky or non-risky enforceable)
+                        - It's classification (i.e., unenforceable or enforceable)
                         - A clear explanation of its classification.
                         - Confidence level and key deciding factors.
 
                      Risky Clause examples:
                      {risky_clauses_text}
 
-                     Give the final output for all clauses - Risky enforceable, Non-risky enforceable and unenforceable. Include all clauses highlighted in the comparison mentioned at the beginning of the prompt."""
+                     Give the final output for all clauses - Risky enforceable, Non-risky enforceable and unenforceable. Include all clauses highlighted in the comparison mentioned at the beginning of the prompt. If a clauses is one-sided in nature, make mention of this."""
                      # Remember: If there is significant uncertainty about classification, document the uncertainty rather than making a definitive classification."""
 
         response = client.chat.completions.create(
@@ -104,7 +103,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     #                  Having compared a contract against a set of regulations, you've identified the following:
     #                  {comparison}
     #
-    #                  Your goal is to classify each clause strictly as one of the following:
+    #                  Your goal is to classify each clause as strictly one of the following:
     #                  - Unenforceable
     #                  - Risky (but enforceable)
     #                  - Non-risky Enforceable
@@ -116,76 +115,30 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     #                  1. Risky Clause Comparison:
     #                     Compare all clauses classified with medium and low confidence against the provided examples of risky clauses. For each comparison:
     #                     - State whether the clause aligns with the examples of risky clauses.
-    #                     - Provide justification for your comparison.
+    #                     - Provide justification for your comparison
     #
     #                  2. Final Output:
-    #                     The final output should classify clauses as **unenforceable, risky, or non-risky enforceable** after the analysis. For each flagged clause, include:
-    #                     - The clause title.
+    #                     The final output should classify clauses as unenforceable, risky, or non-risky enforceable after the analysis. For all clause, include:
     #                     - The full text of the clause.
     #                     - The exact regulation(s) or criteria implicated (if classified as unenforceable).
-    #                     - Its classification (i.e., unenforceable, risky, or non-risky enforceable).
+    #                     - It's classification (i.e., unenforceable, risky or non-risky enforceable)
     #                     - A clear explanation of its classification.
     #                     - Confidence level and key deciding factors.
-    #
-    #                  **Return the final output in JSON format ONLY, with the following structure:**
-    #                  {{
-    #                      "Unenforceable": [
-    #                          {{
-    #                              "Clause Title": "...",
-    #                              "Full Text": "...",
-    #                              "Implicated Regulation": "...",
-    #                              "Classification": "Unenforceable",
-    #                              "Explanation": "...",
-    #                              "Confidence Level": "...",
-    #                              "Key Deciding Factors": "..."
-    #                          }},
-    #                          ...
-    #                      ],
-    #                      "Risky (but enforceable)": [
-    #                          {{
-    #                              "Clause Title": "...",
-    #                              "Full Text": "...",
-    #                              "Implicated Regulation": "...",
-    #                              "Classification": "Risky (but enforceable)",
-    #                              "Explanation": "...",
-    #                              "Confidence Level": "...",
-    #                              "Key Deciding Factors": "..."
-    #                          }},
-    #                          ...
-    #                      ],
-    #                      "Non-risky Enforceable": [
-    #                          {{
-    #                              "Clause Title": "...",
-    #                              "Full Text": "...",
-    #                              "Classification": "Non-risky Enforceable",
-    #                              "Explanation": "...",
-    #                              "Confidence Level": "...",
-    #                              "Key Deciding Factors": "..."
-    #                          }},
-    #                          ...
-    #                      ]
-    #                  }}
     #
     #                  Risky Clause examples:
     #                  {risky_clauses_text}
     #
-    #                  **Do not include any other text, just return valid JSON.**"""
+    #                  Give the final output for all clauses - Risky enforceable, Non-risky enforceable and unenforceable. Include all clauses highlighted in the comparison mentioned at the beginning of the prompt."""
+    #                  # Remember: If there is significant uncertainty about classification, document the uncertainty rather than making a definitive classification."""
     #
     #     response = client.chat.completions.create(
-    #         model=model,
-    #         messages=[{"role": role, "content": prompt}],
-    #         temperature=temperature,
-    #         top_p=top_p,
-    #         max_tokens=max_tokens,
+    #         model       = model,
+    #         messages    = [{"role": role, "content": prompt}],
+    #         temperature = temperature,
+    #         top_p       = top_p,
+    #         max_tokens  = max_tokens,
     #     )
-    #
-    #     # Parse the response as JSON
-    #     try:
-    #         structured_output = json.loads(response.choices[0].message.content)
-    #         return structured_output
-    #     except json.JSONDecodeError:
-    #         print("Error: Response was not valid JSON.")
-    #         return None
+    #     return response.choices[0].message.content
 
     # Read the contract file
     contract_text = read_pdf_pymupdf(contract_path)
@@ -211,28 +164,31 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     )
 
     # Extract regulations from law document
-    regulations = extract_info(
-        document    = regulations_text,
-        prompt      = "Extract only legal provisions from Real Property Law (§) and case law related to rental rights and landlord obligations. List statutes verbatim but exclude procedural explanations. Omit background, history, and general guidelines—keep only enforceable laws and legal precedents.",
-        client      = client,
-        model       = model,
-        role        = role,
-        temperature = temperature,
-        top_p       = top_p,
-        max_tokens  = max_tokens
-    )
+    # regulations = extract_info(
+    #     document    = regulations_text,
+    #     prompt      = "Extract only legal provisions from Real Property Law (§) and case law related to rental rights and landlord obligations. List statutes verbatim but exclude procedural explanations. Omit background, history, and general guidelines—keep only enforceable laws and legal precedents.",
+    #     client      = client,
+    #     model       = model,
+    #     role        = role,
+    #     temperature = temperature,
+    #     top_p       = top_p,
+    #     max_tokens  = max_tokens
+    # )
 
-    comparison1 = law_comparison(clauses, regulations)
+    comparison1 = law_comparison(clauses, regulations_text)
     comparison2 = few_shot_learning(comparison1, risky_clauses_text)
 
     return comparison2
 
 if __name__ == "__main__":
     final_evaluation  = clause_comparison(
-        contract_path = "D:/Downloads/Academics/Capstone Project/Data/Gold Standards/Rental/New York/Contract 1.pdf",
-        law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Residential tenants’ rights guide.pdf",
+        # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Gold Standards/Rental/New York/Contract 1.pdf",
+        contract_path="D:/Downloads/Academics/Capstone Project/Data/Contracts/Rental/New York/Contract 7.pdf",
+        # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses3.txt",
+        # law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Residential tenants’ rights guide.pdf",
+        law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Rental/New York/regulations.txt",
         risky_clauses = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses.pkl",
-        model         = 'Meta-Llama-3.1-70B-Instruct',
+        model         = 'Meta-Llama-3.3-70B-Instruct',
         role          = "user",
         api_key       = "893bd5f1-b41e-4d17-ab1d-3ee3c7cba82b",
         api_base      = "https://api.sambanova.ai/v1",

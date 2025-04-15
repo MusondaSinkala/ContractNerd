@@ -1,0 +1,4 @@
+In addition to enforceable v unenforceable, include a flag to show one-sidedness
+
+- check the output for contract 7 - make sure it quotes the correct law
+- Include the actual law in the output

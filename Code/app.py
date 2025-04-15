@@ -69,8 +69,8 @@ def analyze():
             api_key       = "893bd5f1-b41e-4d17-ab1d-3ee3c7cba82b",
             api_base      = "https://api.sambanova.ai/v1",
             temperature   = 0.1,
-            top_p         = 1.0,
-            max_tokens    = 4096
+            top_p         = 0.1,
+            max_tokens    = 8192
         )
 
         print(f"Contract Path: {contract_path}")

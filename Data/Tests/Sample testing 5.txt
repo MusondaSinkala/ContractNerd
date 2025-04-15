@@ -1,0 +1,92 @@
+After conducting a thorough analysis and comparison against the provided examples of risky clauses, the classification of each clause is as follows:
+
+1. **Clause text:** No subletting, renters insurance, pets, or parking. (**Prohibited Activities**)
+   - **Implicated regulation:** Real Property Law § 226-b(2)
+   - **Classification:** Unenforceable
+   - **Explanation:** This clause is considered unenforceable because it prohibits subletting without mentioning the landlord's advance consent, which is required by the regulation. The lack of provision for landlord consent makes it non-compliant.
+   - **Confidence level:** Medium
+   - **Key deciding factors:** Omission of required consent for subletting.
+
+2. **Clause text:** $50 for each occurrence. (**Late Fee**)
+   - **Implicated regulation:** Real Property Law § 238-a
+   - **Classification:** Enforceable
+   - **Explanation:** The late fee clause is enforceable as it is within the allowed limit of $50 or 5% of the monthly rent, whichever is less, aligning with the regulation.
+   - **Confidence level:** High
+   - **Key deciding factors:** Compliance with the regulatory limit on late fees.
+
+3. **Clause text:** Tenant cannot assign or sublet without landlord's prior written consent. (**Lease Assignment**)
+   - **Implicated regulation:** Real Property Law § 226-b(2)
+   - **Classification:** Enforceable
+   - **Explanation:** This clause is enforceable because it requires prior written consent for subletting, which aligns with the regulation and provides a clear, compliant process for subletting.
+   - **Confidence level:** High
+   - **Key deciding factors:** Inclusion of required consent for subletting.
+
+4. **Clause text:** 60-day written notice required. (**Notice of Vacate**)
+   - **Implicated regulation:** None explicitly stated for notice of vacate
+   - **Classification:** Enforceable
+   - **Explanation:** Although there's no explicit regulation mentioned for the notice of vacate, the 60-day notice period seems reasonable and does not directly conflict with any provided regulations.
+   - **Confidence level:** Medium
+   - **Key deciding factors:** Reasonableness of the notice period and lack of explicit regulatory conflict.
+
+5. **Clause text:** Tenant responsible for fees incurred due to breach. (**Attorney Fees**)
+   - **Implicated regulation:** Real Property Law § 234
+   - **Classification:** Unenforceable
+   - **Explanation:** This clause may be considered one-sided and thus unenforceable because it does not mention the landlord's reciprocal responsibility for attorney fees, potentially violating the principle of mutual responsibility.
+   - **Confidence level:** Medium
+   - **Key deciding factors:** Lack of reciprocity in attorney fee responsibility.
+
+6. **Clause text:** Landlord can terminate with 30-day notice. (**Termination without Cause**)
+   - **Implicated regulation:** None explicitly stated for termination without cause notice period
+   - **Classification:** Unenforceable
+   - **Explanation:** The notice period seems short and may not align with all regulatory requirements, depending on the lease type and circumstances, suggesting it could be unenforceable due to potential non-compliance with unspecified but applicable regulations.
+   - **Confidence level:** Low
+   - **Key deciding factors:** Potential for the notice period to be too short under certain regulatory frameworks.
+
+7. **Clause text:** Landlord to provide and maintain. (**Habitable Premises**)
+   - **Implicated regulation:** Real Property Law § 235-b
+   - **Classification:** Enforceable
+   - **Explanation:** This clause is enforceable as it aligns with the regulation requiring landlords to provide and maintain habitable premises, ensuring a basic level of accommodation quality.
+   - **Confidence level:** High
+   - **Key deciding factors:** Alignment with habitability standards.
+
+8. **Clause text:** Tenant liable for fees as specified. (**Early Termination Fees**)
+   - **Implicated regulation:** Real Property Law § 227-e
+   - **Classification:** Unenforceable
+   - **Explanation:** The clause may be considered unenforceable if the fees are not reasonable or if the landlord does not mitigate damages, as this could violate regulations regarding early termination fees.
+   - **Confidence level:** Medium
+   - **Key deciding factors:** Potential for unreasonable fees and lack of mitigation of damages.
+
+9. **Clause text:** Landlord can enter and remove belongings after 30 days. (**Unpaid Rent**)
+   - **Implicated regulation:** RPAPL § 749
+   - **Classification:** Unenforceable
+   - **Explanation:** This clause is likely unenforceable because it allows the landlord to remove belongings without following specific legal procedures, potentially violating tenant rights and procedural regulations.
+   - **Confidence level:** Medium
+   - **Key deciding factors:** Non-compliance with legal procedures for handling unpaid rent and removal of belongings.
+
+10. **Clause text:** Landlord can terminate tenancy with proper notice. (**Owner Move-In**)
+    - **Implicated regulation:** None explicitly stated for owner move-in termination
+    - **Classification:** Enforceable
+    - **Explanation:** The clause seems reasonable and enforceable as it mentions proper notice, which implies compliance with regulatory requirements, although the specifics can depend on the circumstances and applicable laws.
+    - **Confidence level:** Medium
+    - **Key deciding factors:** Mention of proper notice and implied compliance with regulations.
+
+11. **Clause text:** Landlord can lease and is not responsible for disturbances. (**Adjacent Spaces**)
+    - **Implicated regulation:** Multiple Dwelling Law § 78 and § 80
+    - **Classification:** Unenforceable
+    - **Explanation:** The clause may be unenforceable because it attempts to exempt the landlord from responsibility for disturbances, which could violate regulations requiring landlords to maintain a habitable environment and address disturbances.
+    - **Confidence level:** Medium
+    - **Key deciding factors:** Attempt to exempt from responsibility for maintaining a habitable environment.
+
+12. **Clause text:** Tenant to maintain in good repair and comply with regulations. (**Premises Maintenance**)
+    - **Implicated regulation:** None explicitly stated for tenant maintenance responsibilities
+    - **Classification:** Enforceable
+    - **Explanation:** This clause is enforceable as it reasonably expects tenants to maintain the premises in good condition, which is a common and acceptable lease term.
+    - **Confidence level:** High
+    - **Key deciding factors:** Reasonableness of maintenance expectations.
+
+13. **Clause text:** Tenant to indemnify Landlord against liabilities arising from use of premises. (**Indemnification**)
+    - **Implicated regulation:** General Obligations Law § 5-321
+    - **Classification:** Unenforceable
+    - **Explanation:** The clause may be considered unenforceable because it attempts to exempt the landlord from liability for negligence, which could violate regulations intended to hold landlords responsible for certain liabilities.
+    - **Confidence level:** Medium
+    - **Key deciding factors:** Attempt to exempt landlord from liability for negligence.

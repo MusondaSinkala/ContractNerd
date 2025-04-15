@@ -12,8 +12,8 @@ def main():
     model         = 'Meta-Llama-3.3-70B-Instruct'
     role          = "user"
     temperature   = 0.1
-    top_p         = 1.0
-    max_tokens    = 4096
+    top_p         = 0.1
+    max_tokens    = 8192
 
     # # Generate transformed clauses
     # transformed_clauses = clause_generation(1
