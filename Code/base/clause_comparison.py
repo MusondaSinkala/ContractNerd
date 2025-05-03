@@ -28,8 +28,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                       5. Output the analysis of all clauses - including those which do not violate regulations - in the following format:
                          - Clause text
                          - Violated regulation
-                         - Reasoning
-                         - Confidence level                    
+                         - Reasoning                
                       Contract Clauses:
                       {contract}
                 
@@ -37,6 +36,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                       {laws}
                    
                       Remember: If there is significant uncertainty about non-compliance, err on the side of caution and document the uncertainty rather than classifying as non-compliant.
+                      Do not redact any numbers or names mentioned in the contract
                  """
         # 5. Output only confirmed violations, including:
         #    - Clause text
@@ -53,7 +53,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
             top_p       = top_p,
             max_tokens  = max_tokens,
         )
-        # print(response.choices[0].message.content)
         return response.choices[0].message.content
 
     # Function to conduct few shot learning to classify "risky" clauses
@@ -81,13 +80,11 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                         - The exact regulation(s) or criteria implicated (if classified as unenforceable).
                         - It's classification (i.e., unenforceable or enforceable)
                         - A clear explanation of its classification.
-                        - Confidence level and key deciding factors.
 
                      Risky Clause examples:
                      {risky_clauses_text}
 
-                     Give the final output for all clauses - Risky enforceable, Non-risky enforceable and unenforceable. Include all clauses highlighted in the comparison mentioned at the beginning of the prompt. If a clauses is one-sided in nature, make mention of this."""
-                     # Remember: If there is significant uncertainty about classification, document the uncertainty rather than making a definitive classification."""
+                     Give the final output for all 102 clauses - Enforceable and Unenforceable. Include all clauses. If a clause is one-sided in nature, make mention of this."""
 
         response = client.chat.completions.create(
             model       = model,
@@ -96,49 +93,8 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
             top_p       = top_p,
             max_tokens  = max_tokens,
         )
-        return response.choices[0].message.content
 
-    # def few_shot_learning(comparison, risky_clauses_text):
-    #     prompt = f"""You are a contract language specialist.
-    #                  Having compared a contract against a set of regulations, you've identified the following:
-    #                  {comparison}
-    #
-    #                  Your goal is to classify each clause as strictly one of the following:
-    #                  - Unenforceable
-    #                  - Risky (but enforceable)
-    #                  - Non-risky Enforceable
-    #
-    #                  Review the output and compare it against the provided examples of risky clauses.
-    #
-    #                  Follow this process step by step:
-    #
-    #                  1. Risky Clause Comparison:
-    #                     Compare all clauses classified with medium and low confidence against the provided examples of risky clauses. For each comparison:
-    #                     - State whether the clause aligns with the examples of risky clauses.
-    #                     - Provide justification for your comparison
-    #
-    #                  2. Final Output:
-    #                     The final output should classify clauses as unenforceable, risky, or non-risky enforceable after the analysis. For all clause, include:
-    #                     - The full text of the clause.
-    #                     - The exact regulation(s) or criteria implicated (if classified as unenforceable).
-    #                     - It's classification (i.e., unenforceable, risky or non-risky enforceable)
-    #                     - A clear explanation of its classification.
-    #                     - Confidence level and key deciding factors.
-    #
-    #                  Risky Clause examples:
-    #                  {risky_clauses_text}
-    #
-    #                  Give the final output for all clauses - Risky enforceable, Non-risky enforceable and unenforceable. Include all clauses highlighted in the comparison mentioned at the beginning of the prompt."""
-    #                  # Remember: If there is significant uncertainty about classification, document the uncertainty rather than making a definitive classification."""
-    #
-    #     response = client.chat.completions.create(
-    #         model       = model,
-    #         messages    = [{"role": role, "content": prompt}],
-    #         temperature = temperature,
-    #         top_p       = top_p,
-    #         max_tokens  = max_tokens,
-    #     )
-    #     return response.choices[0].message.content
+        return response.choices[0].message.content
 
     # Read the contract file
     contract_text = read_pdf_pymupdf(contract_path)
@@ -162,18 +118,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
         top_p       = top_p,
         max_tokens  = max_tokens,
     )
-
-    # Extract regulations from law document
-    # regulations = extract_info(
-    #     document    = regulations_text,
-    #     prompt      = "Extract only legal provisions from Real Property Law (§) and case law related to rental rights and landlord obligations. List statutes verbatim but exclude procedural explanations. Omit background, history, and general guidelines—keep only enforceable laws and legal precedents.",
-    #     client      = client,
-    #     model       = model,
-    #     role        = role,
-    #     temperature = temperature,
-    #     top_p       = top_p,
-    #     max_tokens  = max_tokens
-    # )
 
     comparison1 = law_comparison(clauses, regulations_text)
     comparison2 = few_shot_learning(comparison1, risky_clauses_text)

@@ -32,13 +32,13 @@ def about():
     """Render the about page."""
     return render_template('about.html')
 
-@app.route('/analyze', methods=['POST'])
+@app.route('/analyze', methods = ['POST'])
 def analyze():
     """Handle clause analysis requests."""
     try:
         jurisdiction  = request.form.get('jurisdiction')
         contract_type = request.form.get('contractType')
-        contract_file = request.files.get('contractFile')
+        contract_file = request.files.get('contract')
 
         # Validate inputs
         if not jurisdiction or not contract_type:
@@ -55,7 +55,6 @@ def analyze():
             contract_file.save(contract_path)
 
         # Map jurisdiction and contract type to the correct legal document
-        # legal_doc_path = os.path.join(os.getcwd(), 'Data', 'Regulations', contract_type, jurisdiction, 'regulations.pdf')
         legal_doc_path = os.path.join(project_root, 'Data', 'Regulations', contract_type, jurisdiction, 'regulations.pdf')
 
         # Call clause_comparison function

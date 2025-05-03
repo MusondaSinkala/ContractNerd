@@ -1,0 +1,223 @@
+1.  "Tenant agrees to indemnify and hold harmless the landlord from any claims arising from the tenant's use of the premises."
+    Classification: Unenforceable
+2.  "Tenant agrees to automatic lease renewal without notice."
+    Classification: Unenforceable
+3.  "Tenant is liable for all damages to the rental unit, regardless of landlord negligence."
+    Classification: Unenforceable
+4.  "Lease includes an automatic renewal without prior notice to the tenant."
+    Classification: Unenforceable
+5.  "Tenant waives the right to a jury trial in housing court."
+    Classification: Unenforceable
+6.  "Tenant agrees to pay all attorney fees, even if the landlord loses the dispute."
+    Classification: Unenforceable
+7.  "Tenant must vacate the premises immediately upon notice."
+    Classification: Unenforceable
+8.  "Tenant waives the right to a security deposit refund."
+    Classification: Unenforceable
+9.  "Landlord reserves the right to terminate the lease upon providing a 30-day notice without cause."
+    Classification: Unenforceable
+10. "Landlord may enter and remove tenant's belongings if rent is unpaid for 30 days."
+    Classification: Unenforceable
+11. "Landlord may terminate tenancy with a 30-day notice without cause."
+    Classification: Unenforceable
+12. "Tenant is not entitled to any rent deduction because of a disruption or reduction of plumbing, heating, and elevator systems because of accidents, emergencies, or repairs."
+    Classification: Unenforceable
+13. "I understand and agree that I must engage pest extermination company whenever necessary at my own cost and expense."
+    Classification: Unenforceable
+14. "There is a stove and refrigerator in the apartment and they are working fine. I understand and agree if they break down I can bring in my own appliance(s). I understand and agree that the landlord will not supply the appliance(s)."
+    Classification: Unenforceable
+15. "Both tenant and landlord agree to give up the right of trial by jury in a court action, proceeding or counterclaim in any matters concerning this lease, the relationship of tenant and landlord or your use or occupancy of the apartment"
+    Classification: Unenforceable
+16. Clause: "Tenant agrees to arbitration for any disputes arising under this lease."​
+    Classification: Unenforceable
+17. Clause: "Tenant shall indemnify landlord for damages caused by landlord's negligence."
+    Classification: Unenforceable
+18. Clause: "Any breach, regardless of severity, results in immediate lease termination."
+    Classification: Unenforceable
+19. Clause: "Landlord may enter premises at any time without tenant's consent."
+    Classification: Unenforceable
+20. Clause: "Tenant waives all rights to contest eviction proceedings."
+    Classification: Unenforceable
+21. Clause: "Tenant must vacate premises immediately upon landlord's demand, without cause."
+    Classification: Unenforceable
+22. Clause: "Tenant is responsible for all repairs, regardless of cause."
+    Classification: Unenforceable
+23. Clause: "Tenant waives right to challenge rent increases."
+    Classification: Unenforceable
+24. Clause: "Tenant agrees to any future changes in lease terms at landlord's discretion."
+    Classification: Unenforceable
+25. Clause: "Tenant must use premises solely for specified purpose; any deviation leads to eviction."
+    Classification: Unenforceable
+26. Clause: "Tenant must obtain renter's insurance; failure results in eviction."
+    Classification: Unenforceable
+27. Clause: "Lease executed in violation of housing regulations is valid and enforceable."
+    Classification: Unenforceable
+28. Clause: "Tenant shall indemnify landlord for damages caused by landlord's negligence."
+    Classification: Unenforceable
+29. Clause: "Tenant agrees to automatic lease renewal without notice."
+    Classification: Unenforceable
+30. Clause: "Tenant is liable for all damages to the rental unit, regardless of landlord negligence."
+    Classification: Unenforceable
+31. Clause: "Tenant must obtain renter's insurance; failure results in eviction."
+    Classification: Unenforceable
+32. Clause: "Any breach, regardless of severity, results in immediate lease termination."
+    Classification: Unenforceable
+33. 
+34. 
+35. 
+36. 
+37. 
+38. 
+39. 
+40. 
+41. 
+42. 
+43. 
+44. 
+45. 
+46. 
+47. 
+48. 
+49. 
+50. 
+
+1.  "Tenant waives the right to bring a declaratory judgment action with respect to any provision of this lease."
+    Classification: Enforceable
+2.  "Tenant shall not assign the lease or sublet the premises without the landlord's prior written consent."
+    Classification: Enforceable
+3.  "Tenant shall not make alterations to the property without the landlord's prior written consent."
+    Classification: Enforceable
+4.  "Tenant shall not engage in any behavior deemed disruptive or offensive by the Landlord."
+    Classification: Enforceable
+5.  "Tenant is responsible for all utilities and maintenance of the premises."
+    Classification: Enforceable
+6.  "Landlord may terminate tenancy for owner move-in purposes with proper notice."
+    Classification: Enforceable
+7.  "Landlord shall not discriminate against tenants based on gender identity."
+    Classification: Enforceable
+8.  "Tenant shall be liable for early termination fees as specified."
+    Classification: Enforceable
+9.  "Guests may not establish residency without landlord's consent."
+    Classification: Enforceable
+10. "Landlord shall provide habitable premises and address necessary repairs promptly."
+    Classification: Enforceable
+11. "Landlord reserves the right to conduct background checks on all applicants."
+    Classification: Enforceable
+12. "Tenant shall not engage in any unlawful activity on the premises."
+    Classification: Enforceable
+13. "Tenant agrees to pay all rent and additional charges promptly on the first day of each month."
+    Classification: Enforceable
+14. "Tenant shall not assign or sublet the premises without prior written consent from the landlord."
+    Classification: Enforceable
+15. "Tenant shall be responsible for all attorney fees incurred due to breach of this lease agreement."
+    Classification: Enforceable
+16. "Tenant waives the right to a jury trial in any litigation arising from this lease agreement."
+    Classification: Enforceable
+17. "Tenant must provide written notice of intent to vacate at least 60 days prior to lease termination."
+    Classification: Enforceable
+18. "Tenant shall not withhold rent for any reason without the landlord's prior written consent."
+    Classification: Enforceable
+19. "Tenant must reimburse landlord for any legal fees brought by owner against you"
+    Classification: Enforceable
+20. "Tenant shall not engage in any unlawful activity on the premises."​
+    Classification: Enforceable
+21. "Tenant agrees to pay all rent and additional charges promptly on the first day of each month."​
+    Classification: Enforceable
+22. "Tenant shall not assign or sublet the premises without prior written consent from the landlord."​
+    Classification: Enforceable
+23. "Tenant shall be responsible for all attorney fees incurred due to breach of this lease agreement."​
+    Classification: Enforceable
+24. "Tenant waives the right to a jury trial in any litigation arising from this lease agreement."​
+    Classification: Enforceable
+25. "Tenant must provide written notice of intent to vacate at least 60 days prior to lease termination."​
+    Classification: Enforceable
+26. Clause: "Tenant shall not withhold rent for any reason without the landlord's prior written consent."​
+    Classification: Enforceable
+27. Clause: "Tenant shall maintain the premises in good condition and repair."​
+    Classification: Enforceable
+28. "Tenant shall not engage in any unauthorized alterations to the premises."
+    Classification: Enforceable
+29. "The landlord shall return the security deposit within 30 days of lease termination, minus reasonable deductions."
+    Classification: Enforceable
+30. "Tenant may withhold rent if the landlord fails to make necessary repairs within 14 days of notification."
+    Classification: Enforceable
+31. "Landlord retains the right to enter the premises for inspection with 24-hour notice."
+    Classification: Enforceable
+32. "If tenant fails to pay rent within five days of the due date, landlord may begin eviction proceedings."
+    Classification: Enforceable
+33. "Tenant shall obtain renter’s insurance within 30 days of occupancy."
+    Classification: Enforceable
+34. "Landlord may increase rent with 60 days' notice."
+    Classification: Enforceable
+35. "Tenant may terminate the lease early upon payment of an early termination fee equal to two months' rent."
+    Classification: Enforceable
+36. "Tenant shall not keep pets on the premises without landlord's written consent."
+    Classification: Enforceable
+37. "Tenant agrees to vacate the premises upon lease expiration without holdover."
+    Classification: Enforceable
+38. "Tenant shall not sublet the premises without the landlord's written consent."
+    Classification: Enforceable
+39. "Landlord shall be responsible for maintaining heating, plumbing, and electrical systems."
+    Classification: Enforceable
+40. "Tenant agrees to pay all utility bills directly to the utility provider."
+    Classification: Enforceable
+41. "Landlord may evict tenant for engaging in illegal activities on the premises."
+    Classification: Enforceable
+42. "Tenant shall return the premises in good condition, reasonable wear and tear excepted."
+    Classification: Enforceable
+43. "Landlord may enter the premises with 48 hours' notice for inspections or repairs."
+    Classification: Enforceable
+44. "Tenant agrees to comply with all noise regulations established by the landlord."
+    Classification: Enforceable
+45. "Tenant shall not keep hazardous materials on the property."
+    Classification: Enforceable
+46. "Tenant must provide access for necessary repairs and inspections."
+    Classification: Enforceable
+47. "Tenant shall not use the premises for commercial purposes without landlord approval."
+    Classification: Enforceable
+48. "Landlord shall not unreasonably withhold consent for tenant improvements."
+    Classification: Enforceable
+49. "Tenant agrees to adhere to all community rules and regulations."
+    Classification: Enforceable
+50. "Landlord must make reasonable accommodations for disabled tenants."
+    Classification: Enforceable
+51. "Tenant shall vacate within seven days upon termination of the lease."
+    Classification: "Enforceable"
+52. "Tenant shall not withhold rent for minor repairs."
+    Classification: "Enforceable"
+53. "Tenant is responsible for lawn care and snow removal."
+    Classification: "Enforceable"
+54. "Tenant shall pay a late fee if rent is not paid within five days."
+    Classification: "Enforceable"
+55. "Tenant agrees to maintain the premises in a clean and sanitary condition."
+    Classification: "Enforceable"
+56. "Tenant must provide the landlord with written notice of any repairs needed within 10 days."
+    Classification: "Enforceable"
+57. "Landlord reserves the right to enter the premises with 24-hour notice for repairs."
+    Classification: "Enforceable"
+58. "Tenant is prohibited from making any alterations to the premises without written consent from the landlord."
+    Classification: "Enforceable"
+59. "Tenant is responsible for paying all property taxes."
+    Classification: "Enforceable"
+60. "The lease may be terminated by the landlord if the tenant fails to pay rent within 15 days of the due date."
+    Classification: "Enforceable"
+61. "Tenant agrees to maintain renter’s insurance throughout the term of the lease."
+    Classification: "Enforceable"
+62. "Tenant is not allowed to sublet the premises under any circumstances."
+    Classification: "Enforceable"
+63. "Tenant is responsible for all utilities unless otherwise specified in the lease."
+    Classification: "Enforceable"
+64. "Tenant agrees to vacate the property by the last day of the lease term."
+    Classification: "Enforceable"
+65. "Landlord is not responsible for any damages to the tenant’s personal property."
+    Classification: "Enforceable"
+66. "Tenant agrees not to disturb the peace or cause a nuisance."
+    Classification: "Enforceable"
+67. "Tenant may not assign the lease without the landlord’s consent."
+    Classification: "Enforceable"
+68. "Tenant agrees to pay all fees for late rent payments."
+    Classification: "Enforceable"
+69. "Tenant agrees to indemnify the landlord for any damages caused by the tenant's actions."
+    Classification: "Enforceable"
+70. "Tenant agrees to leave the property in the same condition as it was at the beginning of the lease, barring reasonable wear and tear."
+    Classification: "Enforceable"

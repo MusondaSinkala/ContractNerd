@@ -21,7 +21,6 @@
 11. "Tenant agrees to pay an annual service charge of £90, increasing by 10% each year."
     Classification: "Enforceable"
 12. "Landlord reserves the right to terminate the lease upon providing a 30-day notice without cause."
-    The proposed legislation aims to protect tenants from arbitrary evictions, ensuring that landlords provide a valid reason for termination to prevent abuse of power.
     Classification: "Unenforceable"
 13. "Tenant shall not engage in any behavior deemed disruptive or offensive by the Landlord."
     Classification: "Enforceable"

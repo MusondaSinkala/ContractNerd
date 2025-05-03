@@ -1,0 +1,16 @@
+SET 1:
+TRUE:
+Unenforceable: 32 clauses
+Enforceable:   70 clauses
+Total: 102
+
+CONFUSION MATRIX:
+		Une     Enf     
+Unenforceable   25      7 
+Enforceable     8       62
+​
+
+Accuracy: 0.853
+Precision (unenforceable as positive): 0.758
+Recall                               : 0.781
+F1 score                             : 0.769

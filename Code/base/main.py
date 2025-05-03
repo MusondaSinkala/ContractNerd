@@ -1,10 +1,10 @@
-from clause_generation import clause_generation
+# from clause_generation import clause_generation
 from clause_comparison import clause_comparison
 
 def main():
     # Define parameters
-    # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Sample clauses/All clauses.txt"
-    contract_path = "D:/Downloads/Academics/Capstone Project/Data/Contracts/Rental/New York/Contract 7.pdf"
+    contract_path = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses4b.txt"
+    # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Contracts/Rental/New York/Contract 7.pdf"
     output_file   = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses.txt"
     law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Residential tenants’ rights guide.pdf"#,"D:/Downloads/Academics/Capstone Project/Data/Regulations/The Complete Guide on Landlord Tenant Laws - New York.pdf"
     api_base      = "https://api.sambanova.ai/v1"

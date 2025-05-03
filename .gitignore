@@ -11,3 +11,5 @@ Code/ui/archive/
 
 # Ignore pkl files
 *.pkl
+
+Code/test.py

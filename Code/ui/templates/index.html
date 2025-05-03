@@ -15,11 +15,38 @@
             background-color: #f9f9f9;
             position: relative;
         }
+
         .container {
             position: relative;
             width: 100%;
-            max-width: 600px;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
         }
+
+        .form-container {
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 60px;
+            min-width: 300px;
+        }
+
+        .results-container {
+            flex: 1;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
         .top-buttons {
             position: absolute;
             top: 10px;
@@ -29,6 +56,7 @@
             gap: 20px;
             z-index: 10;
         }
+
         .top-buttons a {
             text-decoration: none;
             color: #4CAF50;
@@ -40,77 +68,70 @@
             transition: background-color 0.3s, color 0.3s;
             background-color: #fff;
         }
+
         .top-buttons a:hover {
             background-color: #4CAF50;
             color: white;
         }
-        .form-container {
-            text-align: justify;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            margin-top: 60px;
-        }
+
         .header {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 20px;
         }
+
         .header img {
             width: 60px;
             height: 60px;
             object-fit: cover;
         }
+
         input, select, button {
             display: block;
             margin: 10px 0;
             width: 100%;
             padding: 10px;
         }
+
         button {
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #45a049;
         }
+
         .description {
             margin-bottom: 20px;
             font-size: 14px;
             color: #555;
         }
-        .results-container {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-            font-size: 14px;
-            white-space: pre-wrap;
-            max-height: 300px;
-            overflow-y: auto;
-        }
+
         .highlight-unenforceable {
             background-color: red;
             color: white;
             padding: 2px 5px;
             border-radius: 4px;
         }
+
         .highlight-risky {
             background-color: orange;
             color: white;
             padding: 2px 5px;
             border-radius: 4px;
         }
+
         .highlight-nonrisky {
             background-color: green;
             color: white;
             padding: 2px 5px;
             border-radius: 4px;
         }
+
         .legend {
             margin-top: 10px;
             font-size: 14px;
@@ -124,7 +145,7 @@
             <a href="/">Home</a>
             <a href="/about">About</a>
         </div>
-
+        <!-- Left side - Form -->
         <div class="form-container">
             <div class="header">
                 <img src="{{ url_for('static', filename='contractnerds_logo.jpg') }}" alt="Contract Nerd Logo">
@@ -158,14 +179,16 @@
 
                 <button type="submit">Analyze</button>
             </form>
+
             <div class="legend">
                 <b>Legend:</b>
                 <span class="highlight-unenforceable">Unenforceable</span>
-<!--                <span class="highlight-risky">Risky (but enforceable)</span>-->
-<!--                <span class="highlight-nonrisky">Non-risky Enforceable</span>-->
                 <span class="highlight-nonrisky">Enforceable</span>
             </div>
+        </div>
 
+        <!-- Right side - Results -->
+        <div class="results-container">
             <h2>Analysis Results:</h2>
             <div id="result" class="results-container"></div>
         </div>
