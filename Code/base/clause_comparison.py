@@ -11,40 +11,78 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
         base_url = api_base,
     )
 
+    def completeness_assesment(contract, laws):
+        prompt = f"""
+                     You are a contract language specialist tasked with reviewing the
+                     following contract relative to the gold standard contract provided.
+                     Highlight each clause in the gold standard contract that is not present
+                     in the provided contract and detail the possible implications of this
+                     clause not being present.
+                     The output should be of the following format:
+                     Clause:
+                     Implication if missing:   
+                  """
+
+        response = client.chat.completions.create(
+            model=model,
+            messages=[{"role": role, "content": prompt}],
+            temperature=temperature,
+            top_p=top_p,
+            max_tokens=max_tokens,
+        )
+        return response.choices[0].message.content
+
     # Function to compare contract against relevant laws
     def law_comparison(contract, laws):
-        prompt = f""" You are a contract language specialist reviewing contract clauses against given regulations.
-                      Follow these steps:
-                      1. Break down regulations into main requirements, sub-requirements, and compliance criteria.
-                      2. Analyze each clause:
-                         - Identify key components.
-                         - Map components to regulatory requirements.
-                         - Document potential violations.
-                      3. Classify compliance or non-compliance:
-                         - List the clause and relevant regulation.
-                         - Explain why it may be non-compliant if appropriate.
-                         - Assess confidence level (High/Medium/Low).
-                      4. Self-check: Challenge assumptions, consider alternative interpretations, and document uncertainties.
-                      5. Output the analysis of all clauses - including those which do not violate regulations - in the following format:
-                         - Clause text
-                         - Violated regulation
-                         - Reasoning                
-                      Contract Clauses:
-                      {contract}
-                
-                      Regulations:
-                      {laws}
+        # prompt = f""" You are a contract language specialist reviewing contract clauses against given regulations.
+        #               Follow these steps:
+        #               1. Break down regulations into main requirements, sub-requirements, and compliance criteria.
+        #               2. Analyze each clause individually:
+        #                  - Identify key components.
+        #                  - Map components to regulatory requirements.
+        #                  - Document potential violations.
+        #               3. Classify compliance or non-compliance for each clause individually - do not combine clauses:
+        #                  - List the clause and relevant regulation.
+        #                  - Explain why it may be non-compliant if appropriate.
+        #               4. Self-check: Challenge assumptions, consider alternative interpretations, and document uncertainties.
+        #               5. Output the analysis of all clauses - including those which do not violate regulations - in the following format without exception:
+        #                  Clause: The full clause text as present in the contract
+        #                  Regulation(s) Implicated: The exact regulation violated
+        #                  Reasoning: The perceived reasoning behind the violation
+        #               Contract Clauses:
+        #               {contract}
+        #
+        #               Regulations:
+        #               {laws}
+        #
+        #               Remember: If there is significant uncertainty about non-compliance, err on the side of caution and document the uncertainty rather than classifying as non-compliant.
+        #               Do not redact any numbers or names mentioned in the contract
+        #          """
+
+        prompt = f"""
+                  You are a contract language specialist reviewing contract clauses against regulations. 
+                  Output Requirements:
+                  - Analyze each clause individually
+                  - Use EXACTLY this format for every clause without deviation:
+                      
+                  Clause: "[EXACT FULL CLAUSE TEXT FROM CONTRACT]"
+                  Regulation(s) Implicated: [REGULATION CITATION OR "None" IF COMPLIANT]
+                  Reasoning: [CONCISE EXPLANATION OF COMPLIANCE/NON-COMPLIANCE]
+                    
+                  Rules:
+                  1. Always include the exact clause text in quotes after "Clause:"
+                  2. Never create titles or summarize clauses - use them exactly as written
+                  3. If uncertain about compliance, state this in the reasoning
+                  4. Never combine clauses - analyze each separately
+                  5. Include all clauses, even compliant ones
+                  6. Preserve all numbers and names exactly as written
+                    
+                  Contract Clauses:
+                  {contract}
                    
-                      Remember: If there is significant uncertainty about non-compliance, err on the side of caution and document the uncertainty rather than classifying as non-compliant.
-                      Do not redact any numbers or names mentioned in the contract
-                 """
-        # 5. Output only confirmed violations, including:
-        #    - Clause text
-        #    - Violated regulation
-        #    - Reasoning
-        #    - Confidencelevel
-        # Contract Clauses:
-        # {contract[:1000]}
+                  Regulations:
+                  {laws}
+                  """
 
         response = client.chat.completions.create(
             model       = model,
@@ -53,38 +91,86 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
             top_p       = top_p,
             max_tokens  = max_tokens,
         )
+
         return response.choices[0].message.content
 
     # Function to conduct few shot learning to classify "risky" clauses
     def few_shot_learning(comparison, risky_clauses_text):
-        prompt = f"""You are a contract language specialist.
-                     Having compared a contract against a set of regulations, you've identified the following:
+        prompt = f"""
+                  You are a contract language specialist.
+                  Having compared a contract against a set of regulations, you've identified the following:
+                  {comparison}
+
+                  YOUR TASK:
+
+                  1. Risk Tier Assignment:
+                     - High Risk: Clearly violates law in common scenarios
+                     - Medium Risk: Potentially problematic in some contexts
+                     - Low Risk: Generally compliant but needs monitoring
+                
+                  2. Contextual Classification:
+                     - For each clause, specify:
+                       * "Enforceable in [specific contexts]"
+                       * OR "Unenforceable under [specific conditions]"
+                     - Note any exception cases
+                     
+                  3. Improvement Framework:
+                    - For medium/high risk clauses, suggest:
+                      Alternative phrasing options
+                    - For low risk clauses:
+                      No changes needed.
+
+                  Output Format:
+                  - Clause: The full text of the clause.
+                  - Regulation(s) Implicated: The exact regulation(s) or criteria implicated (if unenforceable).
+                  - Classification: Either `enforceable` or `unenforceable`.
+                  - Risk Tier: [High Risk/Medium Risk/Low Risk]
+                  - Explanation of Classification: A clear explanation of why the clause was classified as enforceable or unenforceable. If a clause is one-sided in nature, make mention of this.
+                  - Improvement Guidance: [Actionable steps]
+                  """
+
+        response = client.chat.completions.create(
+            model       = model,
+            messages    = [{"role": role, "content": prompt}],
+            temperature = temperature,
+            top_p       = top_p,
+            max_tokens  = max_tokens,
+        )
+
+        return response.choices[0].message.content
+
+    def language_detection(comparison):
+        prompt = f"""You are provided with a list of contract clauses:
                      {comparison}
-
-                     Your goal is to classify each clause as strictly one of the following:
-                     - Unenforceable
-                     - Enforceable
-
-                     Review the output and compare it against the provided examples of risky clauses.
-
-                     Follow this process step by step:
-
-                     1. Risky Clause Comparison:
-                        Compare all clauses classified with medium and low confidence against the provided examples of risky clauses. For each comparison:
-                        - State whether the clause aligns with the examples of risky clauses.
-                        - Provide justification for your comparison
-
-                     2. Final Output:
-                        The final output should classify clauses as unenforceable or enforceable after the analysis. For all clause, include:
-                        - The full text of the clause.
-                        - The exact regulation(s) or criteria implicated (if classified as unenforceable).
-                        - It's classification (i.e., unenforceable or enforceable)
-                        - A clear explanation of its classification.
-
-                     Risky Clause examples:
-                     {risky_clauses_text}
-
-                     Give the final output for all 102 clauses - Enforceable and Unenforceable. Include all clauses. If a clause is one-sided in nature, make mention of this."""
+                     For each clause, the following fields are included:
+                     - Clause:
+                     - Regulation(s) Implicated:
+                     - Classification:
+                     - Risk Tier:
+                     - Explanation of Classification:
+                     - Improvement Guidance:
+                     
+                     YOUR TASK:
+                     
+                     - For all clauses, reproduce all the provided fields in the output.
+                     - If a clause is classified as unenforceable, analyze it to determine whether it exhibits any of the following linguistic flaws:
+                     1. Lexical Ambiguity: Words or phrases with multiple interpretations due to insufficient context (e.g., 'reasonable time').
+                     2. Syntactic Ambiguity: Grammatical structure is unclear or confusing (e.g., 'The contractor will repair the walls with cracks').
+                     3. Undue Generality: The clause is overly broad or vague in scope (e.g., 'must meet all necessary standards').
+                     4. Redundancy: The clause repeats the same information unnecessarily.
+                     
+                     - Only mention the traits that are actually present in a clause. If no traits are present, state: 'None listed.'
+                     - For enforceable clauses, do not analyze linguistic traits; instead, simply include all provided fields as-is and state: 'Not applicable' under 'Linguistic Traits Identified.'
+                     
+                     The output should specifically be of the following format with no exceptions:
+                     - Clause:
+                     - Regulation(s) Implicated:
+                     - Classification:
+                     - Risk Tier:
+                     - Linguistic Traits Identified:
+                     - Explanation of Classification:
+                     - Improvement Guidance:
+                  """
 
         response = client.chat.completions.create(
             model       = model,
@@ -107,22 +193,25 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     # Read the regulation file
     regulations_text = read_pdf_pymupdf(law_path)
 
-    # Extract clauses from the contract
-    clauses = extract_info(
-        document    = contract_text,
-        prompt      = "Extract and list each clause in this contract. Keep only legally significant terms, obligations, and figures (e.g., rent amount, penalties, dates). Remove redundant wording and boilerplate text. Summarize each clause in less than 3 sentences. Do not include introductory statements, explanations, or personal commentary - Present the output as a numbered list.",
-        client      = client,
-        model       = model,
-        role        = role,
-        temperature = temperature,
-        top_p       = top_p,
-        max_tokens  = max_tokens,
-    )
+    # # Extract clauses from the contract
+    # clauses = extract_info(
+    #     document    = contract_text,
+    #     prompt      = "Extract and list each clause in this contract. Keep only legally significant terms, obligations, and figures (e.g., rent amount, penalties, dates). Remove redundant wording and boilerplate text. Summarize each clause in less than 3 sentences. Do not include introductory statements, explanations, or personal commentary - Present the output as a numbered list.",
+    #     client      = client,
+    #     model       = model,
+    #     role        = role,
+    #     temperature = temperature,
+    #     top_p       = top_p,
+    #     max_tokens  = max_tokens,
+    # )
+
+    clauses = extract_info(contract_text = contract_text)
 
     comparison1 = law_comparison(clauses, regulations_text)
     comparison2 = few_shot_learning(comparison1, risky_clauses_text)
+    comparison3 = language_detection(comparison2)
 
-    return comparison2
+    return comparison3
 
 if __name__ == "__main__":
     final_evaluation  = clause_comparison(

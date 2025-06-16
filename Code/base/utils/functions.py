@@ -1,4 +1,5 @@
 import fitz
+import re
 
 def read_pdf_pymupdf(file_path):
     """
@@ -28,3 +29,30 @@ def extract_info(document, prompt, client, model, role, temperature, top_p, max_
     text = response.choices[0].message.content
 
     return (text)
+
+def extract_info(contract_text):
+    """
+    Extracts clauses with subpoints combined into their main numbered clauses.
+    Returns them as a numbered string with each main clause (including subpoints) on one line.
+    """
+    # First split the text into main numbered sections
+    main_sections = re.split(r'(?=\n\d+\.)', contract_text.strip())
+
+    processed_clauses = []
+
+    for section in main_sections:
+        if not section.strip():
+            continue
+
+        # Remove leading/trailing whitespace
+        section = section.strip()
+
+        # Combine all lines in the section into one line
+        combined = ' '.join(line.strip() for line in section.split('\n') if line.strip())
+
+        # Clean up multiple spaces
+        combined = ' '.join(combined.split())
+
+        processed_clauses.append(combined)
+
+    return '\n'.join(processed_clauses)
