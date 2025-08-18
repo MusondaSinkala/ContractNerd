@@ -34,30 +34,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
 
     # Function to compare contract against relevant laws
     def law_comparison(contract, laws):
-        # prompt = f""" You are a contract language specialist reviewing contract clauses against given regulations.
-        #               Follow these steps:
-        #               1. Break down regulations into main requirements, sub-requirements, and compliance criteria.
-        #               2. Analyze each clause individually:
-        #                  - Identify key components.
-        #                  - Map components to regulatory requirements.
-        #                  - Document potential violations.
-        #               3. Classify compliance or non-compliance for each clause individually - do not combine clauses:
-        #                  - List the clause and relevant regulation.
-        #                  - Explain why it may be non-compliant if appropriate.
-        #               4. Self-check: Challenge assumptions, consider alternative interpretations, and document uncertainties.
-        #               5. Output the analysis of all clauses - including those which do not violate regulations - in the following format without exception:
-        #                  Clause: The full clause text as present in the contract
-        #                  Regulation(s) Implicated: The exact regulation violated
-        #                  Reasoning: The perceived reasoning behind the violation
-        #               Contract Clauses:
-        #               {contract}
-        #
-        #               Regulations:
-        #               {laws}
-        #
-        #               Remember: If there is significant uncertainty about non-compliance, err on the side of caution and document the uncertainty rather than classifying as non-compliant.
-        #               Do not redact any numbers or names mentioned in the contract
-        #          """
 
         prompt = f"""
                   You are a contract language specialist reviewing contract clauses against regulations. 
@@ -127,6 +103,14 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                   - Risk Tier: [High Risk/Medium Risk/Low Risk]
                   - Explanation of Classification: A clear explanation of why the clause was classified as enforceable or unenforceable. If a clause is one-sided in nature, make mention of this.
                   - Improvement Guidance: [Actionable steps]
+                  
+                  Rules:
+                  1. Always include the exact clause text in quotes after "Clause:"
+                  2. Never create titles or summarize clauses - use them exactly as written
+                  3. If uncertain about compliance, state this in the reasoning
+                  4. Never combine clauses - analyze each separately
+                  5. Include all clauses, even compliant ones
+                  6. Preserve all numbers and names exactly as written
                   """
 
         response = client.chat.completions.create(
@@ -170,6 +154,14 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
                      - Linguistic Traits Identified:
                      - Explanation of Classification:
                      - Improvement Guidance:
+                     
+                     Rules:
+                     1. Always include the exact clause text in quotes after "Clause:"
+                     2. Never create titles or summarize clauses - use them exactly as written
+                     3. If uncertain about compliance, state this in the reasoning
+                     4. Never combine clauses - analyze each separately
+                     5. Include all clauses, even compliant ones
+                     6. Preserve all numbers and names exactly as written
                   """
 
         response = client.chat.completions.create(
@@ -193,18 +185,6 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     # Read the regulation file
     regulations_text = read_pdf_pymupdf(law_path)
 
-    # # Extract clauses from the contract
-    # clauses = extract_info(
-    #     document    = contract_text,
-    #     prompt      = "Extract and list each clause in this contract. Keep only legally significant terms, obligations, and figures (e.g., rent amount, penalties, dates). Remove redundant wording and boilerplate text. Summarize each clause in less than 3 sentences. Do not include introductory statements, explanations, or personal commentary - Present the output as a numbered list.",
-    #     client      = client,
-    #     model       = model,
-    #     role        = role,
-    #     temperature = temperature,
-    #     top_p       = top_p,
-    #     max_tokens  = max_tokens,
-    # )
-
     clauses = extract_info(contract_text = contract_text)
 
     comparison1 = law_comparison(clauses, regulations_text)
@@ -215,10 +195,7 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
 
 if __name__ == "__main__":
     final_evaluation  = clause_comparison(
-        # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Gold Standards/Rental/New York/Contract 1.pdf",
         contract_path="D:/Downloads/Academics/Capstone Project/Data/Contracts/Rental/New York/Contract 7.pdf",
-        # contract_path = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses3.txt",
-        # law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Residential tenants’ rights guide.pdf",
         law_path      = "D:/Downloads/Academics/Capstone Project/Data/Regulations/Rental/New York/regulations.txt",
         risky_clauses = "D:/Downloads/Academics/Capstone Project/Data/Risky Clauses/Rental/New York/risky_clauses.pkl",
         model         = 'Meta-Llama-3.3-70B-Instruct',
