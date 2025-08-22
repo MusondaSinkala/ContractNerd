@@ -56,5 +56,5 @@ ContractNerd
 
 ### Usage
 1. Start the back-end API:
-   - python Code/base/app.py
+   - python Code/app.py
 2.  Open the front-end UI in a browser
