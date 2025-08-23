@@ -9,7 +9,7 @@ import traceback
 # Set the working directory to the project root (Code directory)
 # os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-from base.clause_comparison import clause_comparison
+from Code.base.clause_comparison import clause_comparison
 
 app = Flask(__name__, template_folder = 'ui/templates')
 
