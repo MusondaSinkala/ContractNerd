@@ -87,23 +87,23 @@ def analyze():
         # Parse enhanced output format
         clauses = []
         current_clause = None
-
+        
         for line in final_evaluation.split('\n'):
             line = line.strip()
             if not line:
                 continue
-
+        
             # New clause detection - handles both formats
             if line.startswith('### Clause') or re.match(r'^\d+\.', line):
                 if current_clause:
                     clauses.append(current_clause)
-
+                
                 # Extract clause number from either format
                 if line.startswith('### Clause'):
                     clause_num = line.replace('### Clause', '').strip()
                 else:  # numbered format
                     clause_num = line.split('.', 1)[0].strip()
-
+                
                 current_clause = {
                     'number': clause_num,
                     'text': '',
@@ -116,13 +116,13 @@ def analyze():
                         'improvement_guidance': None
                     }
                 }
-
+                
                 # Extract clause text if present in this line
                 if 'Clause:' in line:
                     text_part = line.split('Clause:', 1)[1].strip()
                     if text_part:  # Only set if there's actual text
                         current_clause['text'] = text_part.strip('"')
-
+                        
             elif current_clause:
                 # Field detection - works for both formats
                 if line.startswith('Clause:') and not current_clause['text']:
@@ -141,23 +141,20 @@ def analyze():
                     current_clause['details']['explanation'] = line.split(':', 1)[1].strip()
                 elif line.startswith('Improvement Guidance:'):
                     current_clause['details']['improvement_guidance'] = line.split(':', 1)[1].strip()
-
+        
         # Add final clause if exists
         if current_clause:
             clauses.append(current_clause)
-
-        # Generate analysis metadata
-        analysis_metadata = {
-            'jurisdiction': jurisdiction,
-            'contract_type': contract_type,
-            'timestamp': datetime.now().isoformat(),
-            'clause_count': len(clauses),
-            'unenforceable_count': sum(1 for c in clauses if c.get('is_unenforceable'))
-        }
-        print(200*"*")
-
-        print("Parsed clauses:")
-        print(clauses)
+        
+        # Debug output
+        print(f"Parsed {len(clauses)} clauses")
+        for i, clause in enumerate(clauses, 1):
+            print(f"\nClause {i}:")
+            print(f"Number: {clause['number']}")
+            print(f"Text: {clause['text']}")
+            print(f"Classification: {clause['classification']}")
+            print(f"Risk Tier: {clause['risk_tier']}")
+            print(f"Details: {clause['details']}")
 
         return jsonify({
             "metadata": analysis_metadata,
