@@ -81,8 +81,6 @@ def analyze():
             max_tokens    = 8192
         )
         print(f"Analysis completed in {time.time() - analysis_start:.2f}s")
-        print(f"Final evaluation content:")
-        print(final_evaluation)
 
         # Parse enhanced output format
         clauses = []
@@ -145,16 +143,15 @@ def analyze():
         # Add final clause if exists
         if current_clause:
             clauses.append(current_clause)
-        
-        # Debug output
-        print(f"Parsed {len(clauses)} clauses")
-        for i, clause in enumerate(clauses, 1):
-            print(f"\nClause {i}:")
-            print(f"Number: {clause['number']}")
-            print(f"Text: {clause['text']}")
-            print(f"Classification: {clause['classification']}")
-            print(f"Risk Tier: {clause['risk_tier']}")
-            print(f"Details: {clause['details']}")
+
+        # Generate analysis metadata
+        analysis_metadata = {
+            'jurisdiction': jurisdiction,
+            'contract_type': contract_type,
+            'timestamp': datetime.now().isoformat(),
+            'clause_count': len(clauses),
+            'unenforceable_count': sum(1 for c in clauses if c.get('is_unenforceable'))
+        }
 
         return jsonify({
             "metadata": analysis_metadata,
