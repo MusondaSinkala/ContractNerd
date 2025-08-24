@@ -153,6 +153,8 @@ def analyze():
             'unenforceable_count': sum(1 for c in clauses if c.get('is_unenforceable'))
         }
 
+        print("DEBUG: Extracted clauses ->", analysis_metadata)
+
         return jsonify({
             "metadata": analysis_metadata,
             "clauses": clauses,
