@@ -177,6 +177,10 @@ def clause_comparison(contract_path, law_path, risky_clauses, model, role, api_b
     # Read the contract file
     contract_text = read_pdf_pymupdf(contract_path)
 
+    ##############################################################
+    ######### Include Code to split clauses into batches #########
+    ##############################################################
+
     # Unpack the list into a string
     risky_clauses_text = ""
     # for item in loaded_data:
